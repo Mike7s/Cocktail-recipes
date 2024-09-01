@@ -1,6 +1,4 @@
-
-
-import NavBar from "./components/navBar/NavBar"
+import NavBar from "./components/navBar/navBar"
 
 function Cocktail () {
     return(

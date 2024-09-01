@@ -17,7 +17,7 @@ function Cocktailprova() {
 
   useEffect(() => {
     fetchCocktailDetails();
-  }, );
+  });
 
   const measures = [];
 
@@ -25,15 +25,15 @@ function Cocktailprova() {
   for (let i = 1; i <= 15; i++) {
     const ingredient = cocktailData[`strIngredient${i}`];
     const measure = cocktailData[`strMeasure${i}`];
-    if(measure){
-        measures.push(measure)
+    if (measure) {
+      measures.push(measure);
     }
     if (ingredient) {
       ingredients.push(ingredient);
     } else {
-      break; 
+      break;
     }
-}
+  }
 
   return (
     <>
@@ -43,16 +43,18 @@ function Cocktailprova() {
           <img src={cocktailData.strDrinkThumb} alt={cocktailData.strDrink} />
         </div>
         <div className="instructions-container">
-      <h1>{cocktailData.strDrink}</h1>
-          <h2>Instruction:</h2>
+          <h1>{cocktailData.strDrink}</h1>
+          <h2>Instruction :</h2>
           <p>{cocktailData.strInstructions}</p>
           <div className="ingredients-container">
-            <h2>ingredients :</h2>
+            <h2>Ingredients :</h2>
             <ul>
-          {ingredients.map((ingredient, index) => (
-            <li key={index}>{ingredient} {measures[index]? `: ${measures[index]}` : ''}</li>
-          ))}
-        </ul>
+              {ingredients.map((ingredient, index) => (
+                <li key={index}>
+                  {ingredient} {measures[index] ? `: ${measures[index]}` : ""}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
