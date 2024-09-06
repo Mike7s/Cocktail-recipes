@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import Card from "./components/card/Card";
+import FavoritesBar from "./components/FavList/favList";
+import Modal from "./modalFavBar";
+import ModalFavBar from "./modalFavBar";
+
 
 
 function App() {
@@ -30,6 +34,8 @@ function App() {
 
   return (
     <>
+    
+        <ModalFavBar/>
     <h1>Search Cocktail</h1>
       <form onSubmit={searchCocktail}>
         <input

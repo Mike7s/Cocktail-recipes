@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "./navBar/navBar";
+import ModalFavBar from "../modalFavBar";
 
 function Cocktailprova() {
   const [cocktailData, setCocktailData] = useState("");
@@ -54,6 +55,7 @@ function Cocktailprova() {
                   {ingredient} {measures[index] ? `: ${measures[index]}` : ""}
                 </li>
               ))}
+              <ModalFavBar/>
             </ul>
           </div>
         </div>
