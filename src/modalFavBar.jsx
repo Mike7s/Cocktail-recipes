@@ -1,5 +1,7 @@
 import { useState } from "react";
 import FavoritesBar from "./components/FavList/favList";
+import { CiBookmark } from "react-icons/ci";
+
 
 function ModalFavBar() {
   const [modal, setModal] = useState(false);
@@ -16,7 +18,8 @@ function ModalFavBar() {
 
   return (
     <>
-      <button className="favList-Button" onClick={toggleModal}>WishList</button>
+      <button className="favList-Button" onClick={toggleModal}><CiBookmark />
+      </button>
       {modal && (
         <div className="modal-overlay" onClick={toggleModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
