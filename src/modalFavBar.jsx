@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FavoritesBar from "./components/favList/favList";
+import FavoritesBar from "./components/favListtest/favList";
 import { CiBookmark } from "react-icons/ci";
 
 

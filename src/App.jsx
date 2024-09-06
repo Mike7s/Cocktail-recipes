@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Card from "./components/card/Card";
-import FavoritesBar from "./components/favList/favList";
+import FavoritesBar from "./components/favListtest/favList";
 import Modal from "./modalFavBar";
 import ModalFavBar from "./modalFavBar";
 
